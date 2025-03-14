@@ -228,5 +228,5 @@ program
   });
 
 // program.parse("node index.js outline __generated_outlines__ --verbose ".split(' '));
-// program.parse("node index.js sample.outline.yaml --verbose ".split(' '));
+// program.parse("node index.js ./clones/github/outlines/desktop.outline.yaml -d ./clones/github/docs -s ./clones/github/sidebars.js --verbose ".split(' '));
 program.parse();
