@@ -2,12 +2,13 @@
   "name": "skelo-cli",
   "version": "3.0.9",
   "description": "Scaffold Docusaurus documentation project using outline files.",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
-    "skelo": "index.js"
+    "skelo": "src/index.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "update:readme": "node src/scripts/update-readme.js"
   },
   "keywords": [
     "docusaurus",

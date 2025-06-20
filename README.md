@@ -1,7 +1,5 @@
 # skelo-cli
 
-
-
 Scaffold Docusaurus documentation project using outline files.
 
 [![npm](https://img.shields.io/npm/v/skelo-cli.svg)](https://www.npmjs.com/package/skelo-cli)
@@ -23,6 +21,7 @@ Scaffold Docusaurus documentation project using outline files.
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
+- [📁 File Structure](#-file-structure)
 - [Usage](#usage)
   - [Basic Help and Version](#basic-help-and-version)
   - [Help Command Output](#help-command-output)
@@ -61,6 +60,79 @@ To install `skelo-cli`, ensure you have Node.js and npm installed, then run:
 npm  install -g skelo-cli
 ```
 
+
+## 📁 File Structure
+
+<!-- File Structure Begin -->
+```plaintext
+skelo-cli
+├── __tests__
+│   ├── skelo-files
+│   │   └── skelo-files-all.test.js
+│   ├── skelo-schema
+│   │   └── all-skelo-schema.test.js
+│   ├── skelo-template
+│   │   └── skelo-template-all.test.js
+│   └── skelo-utils
+│       ├── getItemType.test.js
+│       └── normalizeItem.test.js
+├── .github
+│   └── workflows
+│       ├── greetings.yml
+│       ├── label.yml
+│       ├── njsscan.yml
+│       ├── node.js.yml
+│       ├── npm-publish.yml
+│       ├── stale.yml
+│       └── update-readme.yml
+├── .tours
+├── .vscode
+│   └── launch.json
+├── bin
+│   └── cli.js
+├── docs
+│   ├── item-1.md
+│   └── item-2.md
+├── lib
+│   ├── test
+│   │   └── website
+│   │       ├── sample-copy.outline.yaml
+│   │       └── sample.outline.yaml
+│   ├── skelo-files.js
+│   ├── skelo-logger.js
+│   ├── skelo-schema.js
+│   ├── skelo-template.js
+│   └── skelo-utils.js
+├── schemas
+│   └── outline
+│       └── v1
+│           └── outline.schema.json
+├── src
+│   ├── commands
+│   │   └── build-docs.js
+│   ├── scripts
+│   │   └── update-readme.js
+│   ├── utils
+│   │   └── loadCommands.js
+│   └── index.js
+├── templates
+│   ├── heading.hbs
+│   ├── sidebars.hbs
+│   └── topic.hbs
+├── .gitignore
+├── .npmignore
+├── generate-usage.js
+├── index.js
+├── jest.config.js
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+├── skelo.config.json
+└── USAGE.md
+```
+<!-- File Structure End -->
+
 ## Usage
 
 After installation, you can use the `skelo` command to build or validate your Docusaurus documentation. The core functionality revolves around processing outline files to generate the appropriate file structure and sidebars.
@@ -84,7 +156,7 @@ To view the available commands and options, use the following flags:
 -V or --version: Display the version of skelo-cli.
 
 ```bash
-$ skelo -h
+skelo -h
 $ skelo -V
 ```
 >
@@ -132,6 +204,7 @@ Options:
   --templateExtension <extension>    File extension to use when looking up templates (default: ".hbs")
   -h, --help                         Display help for command
 ```
+
 Init Command
 
 ```bash
@@ -254,11 +327,13 @@ The `skelo init` command creates a configuration file for `skelo`:
 ```bash
 skelo init
 ```
+
 This command creates `skelo.config.json` configuration file in current working file.
 
 ```bash
 skelo init my-skelo.config.json
 ```
+
 This command creates `my-skelo.config.json` configuration file in current working file.
 
 The configuration file looks as follows:
@@ -285,7 +360,6 @@ The configuration file looks as follows:
   "verbose": false
 }
 ```
-
 
 ## Outline File Format
 
@@ -628,7 +702,6 @@ This configuration file mechanism makes it easy to manage settings for your Docu
 
 ## Author
 
-
 [Ion Gireada at Weblidity](https://github.com/weblidity) - ion.gireada[at]weblidity.com
 
 ## License
@@ -736,6 +809,3 @@ Options:
   -v, --verbose                      Verbose output
 ```
 <!-- INSERT_END:USAGE.md -->
-
-
-
